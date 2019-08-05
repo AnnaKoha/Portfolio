@@ -1,0 +1,421 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/normalize";
+@import "vendor/smart-grid";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/blocks";
+
+
+$bg-color:#e4f8ff; 
+$bg-main-color: #79b6cc;
+$title-color: #4c7280;
+$text-color: #263940; 
+$bg-tab-color: #fff6e4;
+$bg-light:#fafafa;
+$myFont: 'Raleway', sans-serif;
+
+.nav-main{
+    background: $bg-main-color;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: $myFont;
+    &-navbar{
+        background: $bg-main-color; 
+        &__title{
+            color:$title-color;
+            font-family: $myFont;
+        }  
+        &__list{
+            color: $text-color;
+        } 
+    }
+ 
+}
+
+
+.work-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+    list-style-type: none;
+}
+
+.work-item{
+    border-radius: 3px;
+    border: 1px;
+    background: #FFF;
+    display: block;
+    margin: 10px;
+    padding: 15px;
+   
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+  .list{
+      list-style-type: none;
+      padding-left: 10px;
+  }
+
+.modal{
+    width: 1500px; 
+    height: 1250px;
+    &-body{
+    width: 1000px;
+    height: 1000px;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+}
+
+.card{
+    font-family: $myFont;
+    text-decoration: none;
+    margin-bottom: 10px;
+        color: #44444f;
+      
+    &:hover{
+        text-decoration: none;
+        color: #44444f; 
+        -webkit-transform: scale(1.03); 
+                transform: scale(1.03);
+        -webkit-transition: .5s;
+        transition: .5s;
+        opacity: 0.6;
+        .card-body_icon{
+            -webkit-transform: translateX(-10px);
+                    transform: translateX(-10px);
+            -webkit-transition: .5s;
+            transition: .5s;
+            opacity: 1;
+        }
+        
+        
+    } 
+    &__title{
+        @media (max-width: 400px) {
+            font-size: 80%;
+        }
+    }
+    max-height: 450px; 
+    &-img-top{
+        padding: 10px;
+        max-width: 100%;
+        height: 300px; 
+        overflow: hidden;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+    &-text{
+        font-family: $myFont;
+        small{
+            display: block;
+        }
+        @media (max-width: 400px) {
+            font-size: 80%;
+        }
+    }
+    &-body{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        &_icon{
+            
+            background-image: url(../img/arrow.png);
+            background-repeat: no-repeat;
+            background-size: contain; 
+            width: 50px;
+            height: 50px;
+            opacity: 0.6;
+           
+        } 
+    }
+ 
+}
+.icon{
+    background-repeat: no-repeat;
+    background-size: contain; 
+    width: 100px;
+    height: 100px;
+}
+
+.about{
+    background: $bg-light;
+    &-nav-navbar{
+        border-bottom: 3px solid $bg-main-color;
+        a{
+            font-family: $myFont;
+            font-size: 25px;  
+            text-decoration: none;
+            color: $title-color;
+            font-weight: 700;
+       
+          
+            }
+        }
+   
+}
+
+
+.experience{
+    margin-top: 31px; 
+    span{
+        font-family: $myFont;
+        font-weight: 700;
+    }
+    &-list{
+        margin: 10px auto;
+        &>li{
+            margin-bottom: 5px;
+            font-family: $myFont;
+        }
+    }
+        &__icon{
+            margin: 0 auto; 
+            background-image: url(../img/expirians.svg); 
+            background-repeat: no-repeat;
+            background-size: contain; 
+            opacity: 1;  
+            &:hover{
+                -webkit-transition: .5s;
+                transition: .5s;
+                opacity: 0.6;   
+            }
+        }  
+}
+
+
+.skills{
+    margin-top: 31px; 
+     span{
+        font-family: $myFont;
+        font-weight: 700;
+    }
+    &-list{
+        &>li{
+            margin-bottom: 5px;
+            font-family: $myFont;
+        }
+    }
+    &__icon{
+        margin: 0 auto; 
+        background-image: url(../img/hobbi1.svg); 
+        background-repeat: no-repeat;
+        background-size: contain; 
+        opacity: 1;  
+        &:hover{
+            -webkit-transition: .5s;
+            transition: .5s;
+            opacity: 0.6;   
+        }
+    } 
+    p{
+        font-family: $myFont;
+        padding-left: 10px;
+    } 
+}
+
+.hobbi{
+    margin-top: 31px; 
+    span{
+        font-family: $myFont;
+        font-weight: 700;
+    }
+    &-list{
+        &>li{
+            margin-bottom: 5px;
+            font-family: $myFont;
+        }
+    }
+        &__icon{
+            margin: 0 auto; 
+            background-image: url(../img/hobbi.svg); 
+            background-repeat: no-repeat;
+            background-size: contain; 
+            opacity: 1;  
+            &:hover{
+                -webkit-transition: .5s;
+                transition: .5s;
+                opacity: 0.6;   
+            }
+        }  
+}
+
+.education{
+    margin-top: 31px;
+    span{
+        font-family: $myFont;
+        font-weight: 700;
+    }
+    &-nav{
+
+        &:active{
+                .education-demo__icon{
+                    -webkit-transform:  scale(1.2, 0.5);
+                            transform:  scale(1.2, 0.5);
+                    -webkit-transition: .5s;
+                    transition: .5s;
+                }
+            }
+        }
+    &-demo{
+        
+    &__icon{
+        margin: 0 auto; 
+        background-image: url(../img/edycation.svg); 
+        background-repeat: no-repeat;
+        background-size: contain; 
+        opacity: 1;  
+        &:hover{
+            -webkit-transition: .5s;
+            transition: .5s;
+            opacity: 0.6;   
+        }
+    }
+}
+}
+.contacts{
+   list-style-type: none;
+
+   &>li{
+        font-family: $myFont;
+        margin-bottom: 15px;
+   }
+    
+    &__icon{
+        width: 35px;
+        height: 35px; 
+        margin-right: 15px;  
+    }
+}
+.portfolio{
+  
+    background: $bg-color;
+    padding-bottom: 100px;
+      &__title{
+        padding-top: 35px;
+        padding-bottom: 45px;
+       
+    }
+   
+}
+
+.title{
+    font-family: $myFont;
+    color: $title-color;
+    font-weight: 700;
+}
+.autor {
+    background:  $bg-light;
+    color: $text-color;
+    &__ava {
+        background-image: url(../img/photo_2019-07-30_23-47-37.jpg);
+        width: 100%;
+        height: 299px;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        overflow: hidden;
+        -o-object-fit: cover;
+        object-fit: cover;
+
+        }
+  }
+
+  .grid-post{
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+ .tab-content{
+    min-height: 270px;
+ }
+/* цвет фона и рамки навигационного меню */
+.navbar-default {
+    background-color:$bg-main-color ;
+    border-color: $bg-color;
+}
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand {
+    color: $bg-light;
+    font-family: $myFont;
+    font-weight: 700;
+    font-size: 28px;
+}
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: $bg-light;
+}
+/* Цвет пунктов навигационного меню */
+.navbar-default .navbar-nav > li > a {
+    color: $text-color;
+}
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: $text-color;
+}
+/* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color:  $bg-light;
+    background-color: $bg-main-color;
+
+
+}
+/* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: $bg-light;
+    background-color: $bg-main-color;
+}
+
+
+
+/* CSS стили для мобильных устройств */
+.navbar-default .navbar-toggler {
+    border-color: $bg-light;
+  } 
+
+/* Цвет пунктов меню в раскрывающихся списках */
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: $bg-main-color;
+  }
+/* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: $bg-light;
+        background-color: $bg-main-color;;
+    }
+}
+
+
+.nav-pills {
+    border-bottom: 3px solid $bg-main-color;
+}
+
+.nav-pills  .nav-link.active, .nav-pills  .show>.nav-link {
+  background: $bg-main-color;
+}
+
+
+
+
+
+
